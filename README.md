@@ -74,6 +74,10 @@ python app.py
 
 A aplicação irá executar o script principal definido em **app.py**, que contém funções de teste para CRUD.
 
+### 6. Rodando Testes
+```bash
+python -m unittest discover -s test/controllers
+```
 ## Estrutura do Projeto
 
 ```bash
@@ -104,3 +108,6 @@ hotel_project/
 ## Dependências
 
 As dependências do projeto são gerenciadas no arquivo **`requirements.txt`**. Certifique-se de atualizar este arquivo sempre que adicionar novas bibliotecas.
+```bash
+pip freeze > requirements.txt
+```
