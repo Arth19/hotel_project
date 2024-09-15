@@ -1,0 +1,13 @@
+cassandra-driver==3.29.2
+certifi==2024.8.30
+charset-normalizer==3.3.2
+click==8.1.7
+dnspython==2.6.1
+geomet==0.2.1.post1
+idna==3.9
+mongoengine==0.29.0
+pymongo==4.8.0
+python-dotenv==0.13.0
+requests==2.32.3
+six==1.16.0
+urllib3==2.2.3

@@ -1,0 +1,4 @@
+myenv/
+.env
+/secure-connect-projeto.zip
+__pycache__/
