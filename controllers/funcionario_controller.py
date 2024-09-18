@@ -9,22 +9,18 @@ class FuncionarioController:
         if "nome" not in dados or not dados["nome"]:
             raise ValueError("Nome do funcionário é obrigatório")
         
+        if "email" not in dados or not re.match(r"[^@]+@[^@]+\.[^@]+", dados["email"]):
+            raise ValueError("Email inválido")
+        
         if "cargo" not in dados or not dados["cargo"]:
             raise ValueError("Cargo do funcionário é obrigatório")
         
         if "salario" not in dados or dados["salario"] <= 0:
-            raise ValueError("Salário deve ser um valor positivo")
-        
-        contato = dados.get("contato", {})
-        if "email" not in contato or not re.match(r"[^@]+@[^@]+\.[^@]+", contato["email"]):
-            raise ValueError("Email inválido")
-        
-        if "telefone" not in contato or len(contato["telefone"]) < 8:
-            raise ValueError("Telefone inválido")
+            raise ValueError("Salário deve ser maior que zero")
 
     @staticmethod
     def criar_funcionario(dados):
-        # Validar dados antes da criação
+        # Validar os dados antes da criação
         FuncionarioController.validar_funcionario(dados)
         create_funcionario(dados)
         print("Funcionário criado com sucesso!")

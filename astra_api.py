@@ -27,19 +27,29 @@ def create_reserva(data):
     else:
         print(f"Erro ao criar reserva: {response.status_code} - {response.text}")
 
-# Obter todas as reservas
-def get_reservas():
+def get_reserva_por_id(reserva_id):
     url = f'{BASE_URL}/reservas'
-    # Passar um 'where' vazio ou omitido para pegar todas as reservas
+    
+    # Adicionar um filtro 'where' para buscar pelo reserva_id
     params = {
-        'where': '{}'  # Retorna todos os registros
+        'where': f'{{"reserva_id": {{"$eq": "{reserva_id}"}}}}'
     }
+    
     response = requests.get(url, headers=HEADERS, params=params)
+    
+    # Exibir a resposta completa da API para depuração
+    print(f"Resposta da API: {response.json()}")
+    
     if response.status_code == 200:
-        return response.json()["data"]
+        reservas = response.json().get("data", [])
+        if reservas:
+            return reservas[0]  # Retorna a primeira reserva encontrada
+        else:
+            print("Nenhuma reserva encontrada.")
+            return None
     else:
-        print(f"Erro ao buscar reservas: {response.status_code} - {response.text}")
-        return []
+        print(f"Erro ao buscar reserva: {response.status_code} - {response.text}")
+        return None
 
 # Atualizar uma reserva existente
 def update_reserva(reserva_id, novos_dados):
