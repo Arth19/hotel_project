@@ -22,7 +22,7 @@ class OperacaoController:
         # Validar os dados antes da criação
         OperacaoController.validar_operacao(dados)
         create_operacao(dados)
-        print("Operação criada com sucesso!")
+        # print("Operação criada com sucesso!")
 
     @staticmethod
     def listar_operacoes():

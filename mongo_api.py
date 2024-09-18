@@ -20,7 +20,7 @@ db = client['HOTEL']  # Nome do banco de dados
 def create_hospede(data):
     collection = db.hospedes
     collection.insert_one(data)
-    print("Hóspede criado com sucesso!")
+    # print("Hóspede criado com sucesso!")
 
 def get_hospedes():
     collection = db.hospedes
@@ -47,7 +47,7 @@ def create_funcionario(data):
     data['uuid'] = str(uuid.uuid4())  # Gerar e adicionar UUID ao funcionário
     collection = db.funcionarios
     collection.insert_one(data)
-    print("Funcionário criado com sucesso!")
+    # print("Funcionário criado com sucesso!")
 
 def get_funcionarios():
     collection = db.funcionarios
@@ -75,7 +75,7 @@ def create_quarto(data):
     data['uuid'] = str(uuid.uuid4())  # Gerar e adicionar UUID ao quarto
     collection = db.quartos
     collection.insert_one(data)
-    print("Quarto criado com sucesso!")
+    # print("Quarto criado com sucesso!")
 
 def get_quartos():
     collection = db.quartos

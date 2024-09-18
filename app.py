@@ -152,7 +152,7 @@ def editar_quarto():
     }
 
     QuartoController.atualizar_quarto(quarto_numero, novos_dados)
-    print(f"Quarto {quarto_numero} atualizado com sucesso!")
+    # print(f"Quarto {quarto_numero} atualizado com sucesso!")
 
     # Mostrar o estado atualizado do quarto
     quartos_atualizados = QuartoController.listar_quartos()

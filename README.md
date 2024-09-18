@@ -89,8 +89,8 @@ hotel_project/
 │   ├── reserva_controller.py # Lógica para CRUD de reservas (Cassandra)
 │   ├── hospede_controller.py # Lógica para CRUD de hóspedes (MongoDB)
 │   ├── funcionario_controller.py # Lógica para CRUD de funcionários (MongoDB)
-│   ├── operacao_controller.py # Lógica para CRUD de operacoes (MongoDB)
-│   ├── faturamento_controller.py # Lógica para CRUD de faturamento (MongoDB)
+│   ├── operacao_controller.py # Lógica para CRUD de operacoes (Cassandra)
+│   ├── faturamento_controller.py # Lógica para CRUD de faturamento (Cassandra)
 │   └── quarto_controller.py  # Lógica para CRUD de quartos (MongoDB)
 ├── models/                   # Modelos de dados para Cassandra e MongoDB
 │   ├── reserva.py            # Modelo de reservas (Cassandra)

@@ -51,7 +51,7 @@ class ReservaController:
         # Valida os dados da reserva antes de criar
         ReservaController.validar_reserva(dados)
         create_reserva(dados)
-        print("Reserva criada com sucesso!")
+        # print("Reserva criada com sucesso!")
 
     @staticmethod
     def listar_reservas(reserva_id):
@@ -69,4 +69,4 @@ class ReservaController:
     def deletar_reserva(reserva_id):
         # Exclui uma reserva com base no ID
         delete_reserva(reserva_id)
-        print(f"Reserva {reserva_id} deletada com sucesso!")
+        # print(f"Reserva {reserva_id} deletada com sucesso!")

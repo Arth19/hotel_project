@@ -25,7 +25,7 @@ class FaturamentoController:
         # Validar os dados antes de criar o faturamento
         FaturamentoController.validar_faturamento(dados)
         create_faturamento(dados)
-        print("Faturamento criado com sucesso!")
+        # print("Faturamento criado com sucesso!")
 
     @staticmethod
     def listar_faturamentos():
